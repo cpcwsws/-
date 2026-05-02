@@ -1,0 +1,14 @@
+<view class="add-page">
+  <view class="form-group">
+    <view class="image-upload" bindtap="uploadImage">
+      <image wx:if="{{imagePath}}" class="preview-img" src="{{imagePath}}" mode="aspectFill"></image>
+      <view wx:else class="upload-placeholder"><text>📷 上传衣服照片</text></view>
+    </view>
+    <button wx:if="{{imagePath}}" class="crop-btn" bindtap="cropCover">✂️ 裁剪封面</button>
+  </view>
+  <view class="form-group"><input placeholder="衣服名称" bindinput="onNameInput" value="{{name}}" class="input" /></view>
+  <view class="form-group"><input placeholder="购买金额 (元)" bindinput="onPriceInput" value="{{price}}" type="digit" class="input" /></view>
+  <view class="form-group"><picker mode="date" value="{{purchaseDate}}" start="2000-01-01" end="{{currentDate}}" bindchange="onDateChange"><view class="picker-view">购买日期: {{purchaseDate || '请选择'}}</view></picker></view>
+  <view class="form-group"><input placeholder="标签/分类 (例如: 上衣, 裤子)" bindinput="onTagInput" value="{{tag}}" class="input" /></view>
+  <view class="btn-group"><button class="save-btn" bindtap="saveClothe">保存</button><button class="cancel-btn" bindtap="cancelAdd">取消</button></view>
+</view>

@@ -1,0 +1,14 @@
+.add-page { padding: 60rpx 40rpx; background: #E8F4F8; min-height: 100vh; box-sizing: border-box; }
+.form-group { margin-bottom: 64rpx; }
+.image-upload { width: 100%; height: 480rpx; background: #DCF2F9; border-radius: 64rpx; display: flex; align-items: center; justify-content: center; overflow: hidden; border: 3rpx dashed #87C4E2; }
+.preview-img { width: 100%; height: 100%; object-fit: cover; }
+.upload-placeholder { color: #4F8BA8; font-size: 36rpx; }
+.crop-btn { margin-top: 24rpx; background: #C9E5F0; color: #2C6E8F; border-radius: 80rpx; font-size: 32rpx; padding: 24rpx; border: none; }
+.input, .picker-view { width: 100%; background: #FFFFFF; padding: 32rpx 36rpx; border-radius: 56rpx; font-size: 36rpx; color: #1E4A62; border: 2rpx solid #B8D8E8; }
+.btn-group { display: flex; gap: 32rpx; margin-top: 100rpx; margin-bottom: 60rpx; }
+.save-btn { background: linear-gradient(105deg, #4797B5, #0077B6); color: white; border-radius: 80rpx; flex: 1; font-size: 40rpx; padding: 36rpx 0; }
+.cancel-btn { background: #C9E5F0; color: #2C6E8F; border-radius: 80rpx; flex: 1; font-size: 40rpx; padding: 36rpx 0; border: 1rpx solid #A8CFE0; }
+.bottom-buttons { display: flex; gap: 24rpx; margin-top: 40rpx; padding-bottom: 40rpx; }
+.bottom-btn { flex: 1; background: #C9E5F0; color: #2C6E8F; border-radius: 80rpx; font-size: 32rpx; padding: 28rpx 0; margin: 0; border: none; }
+.bottom-btn.home { background: #D4EAF2; }
+.bottom-btn:active { opacity: 0.8; transform: scale(0.98); }

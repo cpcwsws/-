@@ -1,0 +1,153 @@
+.gallery-page {
+    background: #E8F4F8;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    box-sizing: border-box;
+  }
+  
+  .toolbar {
+    background: #D4EAF2;
+    padding: 24rpx 32rpx;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 2rpx solid #B8D8E8;
+  }
+  
+  .title {
+    font-size: 40rpx;
+    font-weight: 700;
+    color: #0077B6;
+  }
+  
+  .icon-group {
+    display: flex;
+    gap: 32rpx;
+  }
+  
+  .tool-icon {
+    font-size: 44rpx;
+    width: 70rpx;
+    height: 70rpx;
+    background: #FFFFFFCC;
+    border-radius: 35rpx;
+    text-align: center;
+    line-height: 70rpx;
+    color: #2C6E8F;
+    transition: all 0.1s;
+  }
+  
+  .tool-icon:active {
+    background: #FFFFFF;
+    transform: scale(0.94);
+  }
+  
+  .gallery-scroll {
+    flex: 1;
+    overflow-y: auto;
+    padding: 28rpx 24rpx;
+  }
+  
+  .waterfall {
+    display: grid;
+    gap: 28rpx;
+  }
+  
+  .photo-item {
+    background: #FFFFFFE6;
+    border-radius: 48rpx;
+    overflow: hidden;
+    box-shadow: 0 8rpx 20rpx rgba(0,119,182,0.1);
+    border: 1rpx solid #C9E5F0;
+  }
+  
+  .photo-img-wrapper {
+    position: relative;
+    width: 100%;
+    aspect-ratio: 1 / 1;
+    background: #D4EAF2;
+  }
+  
+  .photo-img {
+    width: 100%;
+    height: 100%;
+  }
+  
+  .photo-placeholder {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    font-size: 36rpx;
+    color: #4F8BA8;
+  }
+  
+  .cover-badge {
+    position: absolute;
+    top: 16rpx;
+    right: 16rpx;
+    background: #FFB347;
+    color: white;
+    font-size: 24rpx;
+    padding: 6rpx 16rpx;
+    border-radius: 40rpx;
+    font-weight: 600;
+  }
+  
+  .photo-info {
+    padding: 20rpx 20rpx 28rpx;
+  }
+  
+  .cloth-name {
+    font-size: 30rpx;
+    font-weight: 600;
+    color: #1E4A62;
+    display: block;
+    margin-bottom: 8rpx;
+  }
+  
+  .wear-count {
+    font-size: 26rpx;
+    color: #0077B6;
+    display: block;
+  }
+  
+  .empty-tip {
+    text-align: center;
+    padding: 120rpx 0;
+    color: #6DA1BD;
+    font-size: 36rpx;
+    background: #F0F9FC;
+    border-radius: 80rpx;
+    margin-top: 60rpx;
+  }
+  
+  .bottom-buttons {
+    display: flex;
+    gap: 24rpx;
+    padding: 20rpx 32rpx 40rpx;
+    background: #E8F4F8;
+    border-top: 1rpx solid #D3E9F0;
+  }
+  
+  .bottom-btn {
+    flex: 1;
+    background: #C9E5F0;
+    color: #2C6E8F;
+    border-radius: 80rpx;
+    font-size: 32rpx;
+    padding: 28rpx 0;
+    margin: 0;
+    border: none;
+    font-weight: 600;
+  }
+  
+  .bottom-btn.home {
+    background: #D4EAF2;
+  }
+  
+  .bottom-btn:active {
+    transform: scale(0.97);
+    opacity: 0.8;
+  }

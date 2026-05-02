@@ -1,0 +1,59 @@
+.detail-page {
+    background: #1E3A4D;  /* 深色背景突出图片 */
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    box-sizing: border-box;
+  }
+  
+  .image-container {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    padding: 20rpx;
+  }
+  
+  .full-image {
+    width: 100%;
+    max-height: 80vh;
+    border-radius: 32rpx;
+    box-shadow: 0 8rpx 32rpx rgba(0,0,0,0.3);
+  }
+  
+  .action-buttons {
+    width: 100%;
+    padding: 40rpx 32rpx 50rpx;
+    background: #E8F4F8;
+    border-radius: 48rpx 48rpx 0 0;
+    display: flex;
+    flex-direction: column;
+    gap: 24rpx;
+  }
+  
+  .action-buttons button {
+    border-radius: 80rpx;
+    font-size: 36rpx;
+    padding: 28rpx 0;
+    margin: 0;
+    border: none;
+    font-weight: 600;
+  }
+  
+  .set-cover-btn {
+    background: linear-gradient(105deg, #4797B5, #0077B6);
+    color: white;
+  }
+  
+  .back-home, .back-prev {
+    background: #C9E5F0;
+    color: #2C6E8F;
+  }
+  
+  button:active {
+    transform: scale(0.97);
+    opacity: 0.8;
+  }

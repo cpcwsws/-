@@ -1,0 +1,30 @@
+.crop-page {
+    background: #1E3A4D;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .crop-canvas {
+    background: #000;
+    border-radius: 24rpx;
+  }
+  .crop-actions {
+    margin-top: 48rpx;
+    display: flex;
+    gap: 32rpx;
+    width: 80%;
+  }
+  .confirm-btn, .cancel-btn {
+    flex: 1;
+    background: #0077B6;
+    color: white;
+    border-radius: 80rpx;
+    font-size: 36rpx;
+    padding: 28rpx 0;
+  }
+  .cancel-btn {
+    background: #A0C4D8;
+    color: #1E3A4D;
+  }

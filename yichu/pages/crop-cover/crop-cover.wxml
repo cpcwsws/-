@@ -1,0 +1,7 @@
+<view class="crop-page">
+  <canvas type="2d" id="cropCanvas" class="crop-canvas" style="width: {{canvasWidth}}px; height: {{canvasHeight}}px;"></canvas>
+  <view class="crop-actions">
+    <button class="confirm-btn" bindtap="confirmCrop">✓ 设为封面</button>
+    <button class="cancel-btn" bindtap="cancelCrop">取消</button>
+  </view>
+</view>

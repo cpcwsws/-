@@ -1,0 +1,49 @@
+<view class="page">
+  <!-- 顶部导航栏：横向滚动，确保所有图标在一行 -->
+  <view class="nav-bar">
+    <scroll-view scroll-x class="nav-scroll" enhanced show-scrollbar="{{false}}">
+      <view class="nav-icons">
+        <view class="nav-icon" bindtap="goToAdd">➕</view>
+        <view class="nav-icon" bindtap="onClearTap">🗑️</view>
+        <view class="nav-icon" bindtap="onSafetyTap">🛡️</view>
+        <view class="nav-icon" bindtap="onPhotoGalleryTap">🖼️</view>
+        <view class="nav-icon" bindtap="onSortTap">📊</view>
+        <view class="nav-icon" bindtap="onLayoutChange">▦</view>
+        <view class="nav-icon" bindtap="onGlobalLogsTap">📋</view>
+      </view>
+    </scroll-view>
+  </view>
+
+  <!-- 分类导航 -->
+  <view class="category-wrapper">
+    <scroll-view scroll-x class="category-scroll" enhanced show-scrollbar="{{false}}" scroll-into-view="{{scrollIntoView}}">
+      <view class="category-list">
+        <view id="cate_all" class="category-item {{currentCategory === '全部' ? 'active' : ''}}" bindtap="onCategoryTap" data-cate="全部">全部</view>
+        <block wx:for="{{categories}}" wx:key="index">
+          <view id="cate_{{item}}" class="category-item {{currentCategory === item ? 'active' : ''}}" bindtap="onCategoryTap" data-cate="{{item}}">{{item}}</view>
+        </block>
+      </view>
+    </scroll-view>
+  </view>
+
+  <!-- 瀑布流内容 -->
+  <scroll-view scroll-y class="content-scroll" enhanced show-scrollbar="{{false}}" lower-threshold="100">
+    <view class="waterfall" style="grid-template-columns: repeat({{columns}}, 1fr);">
+      <block wx:for="{{displayClothes}}" wx:key="id">
+        <view class="card" bindtap="onCardTap" data-id="{{item.id}}">
+          <view class="card-img-wrapper">
+            <image wx:if="{{item.coverImage && item.coverImage !== ''}}" class="card-img" src="{{item.coverImage}}" mode="aspectFill" lazy-load></image>
+            <view wx:else class="card-img-placeholder">{{item.name}}</view>
+            <view class="wear-count-badge">👕 {{item.wearCount}}次</view>
+          </view>
+          <view class="card-info">
+            <text class="card-title">{{item.name}}</text>
+            <text class="card-price">¥{{item.price || 0}}</text>
+          </view>
+        </view>
+      </block>
+    </view>
+    <view wx:if="{{clothes.length === 0}}" class="empty-placeholder">✨ 暂无衣物，点击顶部➕添加 ✨</view>
+    <view style="height: 40rpx;"></view>
+  </scroll-view>
+</view>

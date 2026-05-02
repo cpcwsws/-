@@ -1,0 +1,32 @@
+<view class="gallery-page">
+  <!-- 顶部工具栏 -->
+  <view class="toolbar">
+    <view class="title">📸 照片空间</view>
+    <view class="icon-group">
+      <view class="tool-icon" bindtap="onLayoutChange">▦</view>
+      <view class="tool-icon" bindtap="onSortTap">📊</view>
+    </view>
+  </view>
+
+  <!-- 照片瀑布流 -->
+  <scroll-view scroll-y class="gallery-scroll" enhanced show-scrollbar="{{false}}" lower-threshold="100">
+    <view class="waterfall" style="grid-template-columns: repeat({{columns}}, 1fr);">
+      <block wx:for="{{displayItems}}" wx:key="index">
+        <view class="photo-item" bindtap="onPhotoTap" data-photo="{{item}}">
+          <view class="photo-img-wrapper">
+            <image wx:if="{{item.photoPath}}" class="photo-img" src="{{item.photoPath}}" mode="aspectFill" lazy-load></image>
+            <view wx:else class="photo-placeholder">{{item.clothName}}</view>
+            <view wx:if="{{item.isCover}}" class="cover-badge">⭐ 封面</view>
+          </view>
+          <view class="photo-info">
+            <text class="cloth-name">{{item.clothName}}</text>
+            <text class="wear-count">👕 {{item.wearCount}}次</text>
+          </view>
+        </view>
+      </block>
+    </view>
+    <view wx:if="{{displayItems.length === 0}}" class="empty-tip">✨ 暂无照片，请先添加衣服或穿着记录 ✨</view>
+    <view style="height: 40rpx;"></view>
+  </scroll-view>
+
+</view>

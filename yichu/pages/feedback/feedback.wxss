@@ -1,0 +1,7 @@
+.feedback-page { padding: 60rpx 40rpx; background: #E8F4F8; min-height: 100vh; display: flex; flex-direction: column; }
+.feedback-title { font-size: 44rpx; font-weight: 700; color: #0077B6; margin-bottom: 60rpx; text-align: center; }
+.feedback-textarea { background: #FFFFFF; border-radius: 48rpx; padding: 32rpx; font-size: 34rpx; height: 400rpx; border: 2rpx solid #B8D8E8; margin-bottom: 80rpx; }
+.submit-btn { background: linear-gradient(105deg, #4797B5, #0077B6); color: white; border-radius: 80rpx; font-size: 40rpx; padding: 36rpx 0; margin-bottom: 60rpx; }
+.bottom-buttons { display: flex; gap: 24rpx; margin-top: auto; }
+.bottom-btn { flex: 1; background: #C9E5F0; color: #2C6E8F; border-radius: 80rpx; font-size: 32rpx; padding: 28rpx 0; margin: 0; border: none; }
+.bottom-btn.home { background: #D4EAF2; }

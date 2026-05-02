@@ -1,0 +1,18 @@
+<view class="edit-page">
+  <view class="top-right-btn" bindtap="viewAllLogs">📋 查看所有日志</view>
+  <view class="records-section">
+    <view class="section-title">📝 穿着记录 (最近)</view>
+    <scroll-view scroll-y class="records-scroll" enhanced show-scrollbar="{{false}}">
+      <view wx:if="{{wearRecords.length === 0}}" class="empty-records">✨ 暂无穿着记录，点击下方新增 ✨</view>
+      <view wx:for="{{wearRecords}}" wx:key="id" class="record-item">
+        <view class="record-date">📅 {{item.date}}</view>
+        <view class="record-event">{{item.event || '无备注'}}</view>
+      </view>
+    </scroll-view>
+  </view>
+  <view class="action-buttons">
+    <button class="primary-btn" bindtap="onEditInfo">✏️ 修改衣服信息</button>
+    <button class="primary-btn" bindtap="onAddRecord">📅 新增穿着记录</button>
+    <button class="secondary-btn" bindtap="onViewPhotoSpace">🖼️ 照片空间</button>
+  </view>
+</view>

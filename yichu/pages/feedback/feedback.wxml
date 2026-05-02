@@ -1,0 +1,6 @@
+<view class="feedback-page">
+  <view class="feedback-title">💬 告诉我们你的想法</view>
+  <textarea class="feedback-textarea" placeholder="请写下您的意见或建议，我们会认真阅读~" maxlength="300" bindinput="onInput"></textarea>
+  <button class="submit-btn" bindtap="submitFeedback">提交反馈</button>
+
+</view>

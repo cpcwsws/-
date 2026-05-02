@@ -1,0 +1,42 @@
+/* app.wxss - 青蓝关怀版 */
+page {
+  background: #E8F4F8;
+  font-family: -apple-system, BlinkMacSystemFont, 'SF Pro Text', 'Helvetica Neue', 'PingFang SC', 'Segoe UI', Roboto, sans-serif;
+  font-size: 32rpx;
+  color: #1E3A4D;
+}
+
+/* 移除所有滚动条 */
+::-webkit-scrollbar {
+  display: none;
+  width: 0;
+  background: transparent;
+}
+
+/* 全局页面容器统一左右间距 */
+.page-container {
+  padding-left: 40rpx;
+  padding-right: 40rpx;
+  box-sizing: border-box;
+}
+
+/* 按钮统一点击效果 */
+button {
+  border-radius: 80rpx !important;
+  font-weight: 600;
+  font-size: 34rpx;
+  padding: 28rpx 0;
+  margin: 0;
+}
+button::after {
+  border: none;
+}
+
+/* 卡片点击态 */
+.card, .record-item, .photo-item {
+  transition: transform 0.1s, background 0.1s;
+}
+.card:active, .record-item:active, .photo-item:active {
+  transform: scale(0.98);
+  background: #DCF2F9;
+}

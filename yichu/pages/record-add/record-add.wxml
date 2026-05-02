@@ -1,0 +1,13 @@
+<view class="record-page">
+  <picker mode="date" value="{{recordDate}}" end="{{maxDate}}" bindchange="onDateChange">
+    <view class="date-picker">📅 穿着日期: {{recordDate}}</view>
+  </picker>
+  <textarea placeholder="记录当天穿搭事件（例如：和好友逛街，很开心）" bindinput="onEventInput" class="event-input" value="{{eventDesc}}"></textarea>
+  <view class="photo-upload" bindtap="uploadRecordPhoto">
+    <image wx:if="{{photoPath}}" class="photo-preview" src="{{photoPath}}" mode="aspectFill"></image>
+    <view wx:else class="upload-box">📸 上传记录照片（可设为封面）</view>
+  </view>
+  <button class="save-record" bindtap="saveRecord">保存记录</button>
+  <button class="back-btn" bindtap="back">取消</button>
+  
+</view>

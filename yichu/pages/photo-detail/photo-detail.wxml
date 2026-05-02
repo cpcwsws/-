@@ -1,0 +1,8 @@
+<view class="detail-page">
+  <view class="image-container">
+    <image class="full-image" src="{{photoPath}}" mode="aspectFit" show-menu-by-longpress></image>
+  </view>
+  <view class="action-buttons">
+    <button class="set-cover-btn" bindtap="setAsCover">⭐ 设为封面</button>
+  </view>
+</view>

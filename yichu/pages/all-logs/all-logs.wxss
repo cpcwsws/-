@@ -1,0 +1,10 @@
+.logs-page { background: #E8F4F8; min-height: 100vh; display: flex; flex-direction: column; padding: 40rpx 32rpx; }
+.logs-header { font-size: 44rpx; font-weight: 700; color: #0077B6; text-align: center; padding-bottom: 40rpx; }
+.logs-scroll { flex: 1; overflow-y: auto; margin-bottom: 40rpx; }
+.log-item { background: #FFFFFFE6; border-radius: 48rpx; padding: 32rpx; margin-bottom: 28rpx; border: 1rpx solid #C9E5F0; }
+.log-date { font-size: 34rpx; font-weight: 700; color: #0077B6; margin-bottom: 12rpx; }
+.log-event { font-size: 30rpx; color: #4F8BA8; line-height: 1.4; }
+.empty-logs { text-align: center; padding: 80rpx; color: #6DA1BD; font-size: 36rpx; }
+.bottom-buttons { display: flex; gap: 24rpx; margin-top: 20rpx; }
+.bottom-btn { flex: 1; background: #C9E5F0; color: #2C6E8F; border-radius: 80rpx; font-size: 32rpx; padding: 28rpx 0; margin: 0; border: none; }
+.bottom-btn.home { background: #D4EAF2; }
